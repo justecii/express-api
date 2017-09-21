@@ -5,9 +5,7 @@
 	<body>
 	  <input type="text" name="q" placeholder="Search for GIFs...">
 	  <button type="button">Search!</button>
-	  <div id="resultImages">
-
-	  </div>
+	  <div id="resultImages"></div>
 	  <script
 		src="https://code.jquery.com/jquery-3.2.1.js"
 		integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
@@ -21,15 +19,9 @@
 		  // get data returned from the get route
 		  for (var i=0; i<25; i++) {
 			  var imageResult= data.data[i].images.original.url;
-			  console.log(imageResult);
-			var giphy = '<img src="' + imageResult + '">';
+				var giphy = '<img src="' + imageResult + '">';
 			  $('#resultImages').append(giphy);
-
-			  console.log();
 		  };
-		  // TODO: Add functionality that takes the data
-		  //  and inserts it into the page
-
 		});
 	  });
 	  </script>
